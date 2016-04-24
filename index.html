@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GyümölcsKlub</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/> 
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+
+	var ures = 1;
+	var fruits = [];
+	
+	$(function() {
+	$("#content").load("main.html").attr('href'); 
+	}); 
+	
+	$(document).ready(function(){	
+		$('#mainMenu li a').each(function(){
+			$(this).click(function(event){
+				event.preventDefault();
+			$('#content').load($(this).attr('href'));
+			if (ures==0) {
+				$('#gyumolcskosar').fadeIn();
+				ures = 1;
+				$('#content2').empty();
+			}
+			});
+		});	
+	});
+	
+	
+	$.getJSON('gyhirek.json', function(data){
+		$(data).each(function(index, val){
+			
+			var newsTitleEntry = document.createElement('div');
+			$(newsTitleEntry).html(val['title']);
+			$(newsTitleEntry).addClass('gyumolcsHirCim');
+			
+			var newsTextEntry = document.createElement('span');
+			$(newsTextEntry).html(val['text']);
+			$(newsTextEntry).addClass('gyumolcsHirSzoveg');
+			
+			var newsItemEntry = document.createElement('div');
+			$(newsItemEntry).addClass('gyumolcsHirItem');
+			$(newsItemEntry).append(newsTitleEntry);
+			$(newsItemEntry).append(newsTextEntry);
+				
+			$('#gyumolcshirek').append(newsItemEntry);
+		});
+	});
+	
+	
+	$.getJSON('kepek.json', function(data){
+		var imgList = "";
+		$(data).each(function(index, val){
+			imgList += '<li><img src= "' + this.kep + '"height="150"></li>';
+		});
+		$('#gyumolcskosar').append(imgList);
+	});
+	
+</script>
+
+</head>
+<body>
+	<div id="page">
+		<div id="banner"></div>
+		<div id="vekonyszalag"></div>
+		<div id="szalag">
+			<div id="focim">
+				<table>
+					<tr>
+						<td rowspan="2" width="110px"><a href="index.html"><img src="pics/Bananjo.png" alt="Alma" style=" width:100px ;"></a></td>
+						<td valign="bottom">GyümölcsKlub</td>
+					</tr>
+					<tr>
+						<td valign="top"><div id="focim_duma">Egyél gyümölcsöt, mert a gyümölcs jó...</div></td>
+					</tr>
+				</table>
+				<div id="mainMenu">
+					<ul>
+						<li><a href="gyf.html">Gyümülcs fajták</a></li>
+						<li><a href="fgy.html">Friss gyümölcs</a></li>
+						<li><a href="mjagy.html">Mire jó a gyömülcs?</a></li>
+						<li><a href="vitamin.html">C Vitamin</a></li>
+						<li><a href="gyik.html">GYIK</a></li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+		<div id="vekonyszalag"></div>
+		<div id="gyumolcskosar"></div>
+		<div id="gyumolcshirek"></div>
+		<div id="content"></div>
+		<div id="content2"></div>
+		<br style="clear:both"/>
+		<div id="footer">GyümölcsKlub | Egyél gyümölcsöt, mert a gyümölcs jó...</div>			
+			
+	</div>
+	
+</body>
+</html>

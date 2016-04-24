@@ -1,0 +1,53 @@
+<script type="text/javascript">
+
+
+function vitmegkap(alma, ananasz, banan, cseresznye, korte, malna, szamoca, szeder, szilva) {
+	return (fruits[0]*alma + fruits[1]*ananasz + fruits[2]*banan + fruits[3]*cseresznye + fruits[4]*korte + fruits[5]*malna + fruits[6]*szamoca + fruits[7]*szeder + fruits[8]*szilva);
+}
+
+
+function checkForm(){
+	
+	var alma = document.getElementById("alma").value;
+	var ananasz = document.getElementById("ananász").value;
+	var banan = document.getElementById("banán").value;
+	var cseresznye = document.getElementById("cseresznye").value;
+	var korte = document.getElementById("körte").value;
+	var malna = document.getElementById("málna").value;
+	var szamoca = document.getElementById("szamóca").value;
+	var szeder = document.getElementById("szeder").value;
+	var szilva = document.getElementById("szilva").value;
+	
+	var isFormOK = 1;
+	
+	if ((alma < 0) || (ananasz < 0) || (banan < 0) || (cseresznye < 0) || (korte < 0) || (malna < 0) || (szamoca < 0) || (szeder < 0) || (szilva < 0)){
+		isFormOK = 0;
+	}
+
+	if (isFormOK) {
+		document.getElementById('eredmeny').innerHTML = 'Ennyi gramm C vitamint vittél be a szervezetedbe ha 100gramm volt mindegyik gyömölcs: <b>' + vitmegkap(alma, ananasz, banan, cseresznye, korte, malna, szamoca, szeder, szilva) + ' g</b>';
+	} 	
+}
+
+
+
+$.getJSON('kepek.json', function(data){
+	var imgList = "";
+	imgList +='<form action="vitamin.html"><table>';
+	$(data).each(function(index, val){
+		imgList += '<tr><td>' + this.nev  + '</td><td><input type="number" id="'+ this.nev +'" /></td></tr>';
+ 		fruits.push(this.cvitamin);
+	});
+	imgList += '</table>';
+	imgList += '<input type="button" OnClick="checkForm()" value="Számol">';
+	imgList += '</form>';
+	$('#content').append(imgList);
+	$('#content').append('<br><br><label id="eredmeny"></label>');
+	
+});
+
+</script>
+
+<h2>C Vitamin kalkulátor</h2>
+<b>Add meg melyik gyümölcsből hány darabot eszel átlagosan naponta!</b><br><br>
+

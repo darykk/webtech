@@ -1,0 +1,46 @@
+[{
+	"nev": "alma",
+	"lnk": "gyumik/alma.html",
+	"cvitamin": "5",
+	"kep": "pics/300/Applejo300.png"
+}, {
+	"nev": "ananász",
+	"lnk": "gyumik/ananasz.html",
+	"cvitamin": "50",
+	"kep": "pics/300/Ananszjo300.png"
+}, {
+	"nev": "banán",
+	"lnk": "gyumik/banan.html",
+	"cvitamin": "9",
+	"kep": "pics/300/Bananjo300.png"
+}, {
+	"nev": "cseresznye",
+	"lnk": "gyumik/cseresznye.html",
+	"cvitamin": "7",
+	"kep": "pics/300/Cseresznyejo300.png"
+}, {
+	"nev": "körte",
+	"lnk": "gyumik/korte.html",
+	"cvitamin": "7",
+	"kep": "pics/300/Kortejo300.png"
+}, {
+	"nev": "málna",
+	"lnk": "gyumik/malna.html",
+	"cvitamin": "30",
+	"kep": "pics/300/Malnajo300.png"
+}, {
+	"nev": "szamóca",
+	"lnk": "gyumik/szamoca.html",
+	"cvitamin": "60",
+	"kep": "pics/300/Szamocajo300.png"
+}, {
+	"nev": "szeder",
+	"lnk": "gyumik/szeder.html",
+	"cvitamin": "21",
+	"kep": "pics/300/Szederjo300.png"
+}, {
+	"nev": "szilva",
+	"lnk": "gyumik/szilva.html",
+	"cvitamin": "6",
+	"kep": "pics/300/Szilvajo300.png"
+}]

@@ -1,0 +1,252 @@
+body {
+color : black; 
+background-color : #ccffcc ;
+overflow-x: hidden;
+}
+
+
+#page {
+margin : auto;
+position: relative;
+width: 80%;
+}
+
+#banner {
+margin : auto;
+width : 1024px;
+min-height: 100px;
+background-image: url('../pics/300/Kortejo300.png'), url('../pics/300/Cseresznyejo300.png'), url('../pics/300/Applejo300.png');
+background-position: right top, center, left top;
+background-repeat: no-repeat;
+}
+
+#vekonyszalag {
+margin: auto;
+min-height: 5px;
+width: 100%;
+}
+
+#szalag {
+width : 100%;
+min-height: 200px;
+background-color: #00cc66;
+color : yellow;
+/* position: absolute; */
+/* left: -1px; */
+top: 120px;
+margin: 0 -9999px;
+padding: 0 9999px; 
+}
+
+#focim {
+margin: auto;
+width : 1024px;
+font-size: xx-large;
+font-family: fantasy;
+font-style: normal;
+text-align: left;
+color: #006600;
+ position: relative;
+/*background-color : #99ff66 ;*/
+top: 20px;
+}
+
+#focim_duma {
+margin: auto;
+font-size: medium;
+}
+
+#mainMenu {
+width : 100%;
+min-height: 50px;
+}
+
+#mainMenu a:link {
+    text-decoration: none;
+    color: #006600;
+}
+
+#mainMenu a:visited {
+    text-decoration: none;
+    color: #006600;
+}
+
+#mainMenu a:hover {
+    text-decoration: none;
+    color: #b3ffbb;
+}
+
+#mainMenu a:active {
+    text-decoration: none;
+}
+
+#mainMenu  ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+#mainMenu  ul li{
+
+display : inline-block;
+/* border-color: navy;
+border : solid 2px;
+border-radius : 10px;
+background-color: teal;
+*/
+margin-top: 10px;
+margin-bottom: 10px;
+margin-right:20px;
+font-size: 20px;
+font-family: "Arial";
+padding: 5px;
+}
+
+/*
+#mainMenu  ul li:HOVER{
+background-color: #00cc00 ;
+}
+*/
+
+#content {
+margin: auto;
+width : 1024px;
+min-height: 1px;
+/* background-color : #99ff66 ; */
+/* position: relative; */ 
+top: 260px;
+color: #006600;
+font-family: "Arial";
+font-size: large;
+text-align: justify;
+}
+
+#content2 ol {
+	text-align: center;
+}
+
+#content2 ol li {
+	display: inline-block;
+	margin-bottom: 25px;
+	margin-right: 20px;
+	background: #b3ffbb;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+#content2 {
+margin: auto;
+width: 1024px;
+color: #006600;
+font-family: "Arial";
+font-size: large;
+text-align: justify;
+	/* background-color: yellow; */
+	
+}
+#footer {
+
+position: absoulte;
+bottom: 0; 
+/* margin: auto; */
+width : 100%;
+min-height: 30px;
+background-color : #4e9a06 ;
+margin: 0 -9999px;
+padding: 0 9999px; 
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: "Arial";
+}
+
+#gyumolcshirek {
+	margin: auto;
+	float:left;
+	width:180px;
+	padding-top: 20px;
+}
+
+#gyumolcshirek .gyumolcsHirItem {
+margin: 5px;
+background-color : #b3ffbb;
+border: 1px;
+border-style: dotted;
+font-size: 12px;
+padding: 8px;
+text-align: left;
+}
+
+#gyumolcshirek .gyumolcsHirItem .gyumolcsHirCim {
+/*  background-color: #00cc66; */ 
+/* width: 100%; */
+padding: 5px;
+padding-bottom:15px;
+color: #006600;
+font-family: "Arial";
+font-size: 18px;
+font-weight: bold;
+text-align: center;
+}
+
+#gyumolcshirek .gyumolcsHirItem .gyumolcsHirSzoveg {
+color: #006600;
+font-family: "Arial";
+font-size: 14px; 
+}
+
+
+#gyumolcskosar {
+	margin: auto;
+	float:right;
+	width:180px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+#gyumolcskosar li {
+	display: block;
+	margin-bottom: 25px;
+	background: green;
+	
+}
+
+#news {
+
+width : 150px;
+min-height: 30px;
+float : left;
+background-color : orange ;
+margin: 0 0 10px 10px;
+}
+
+#news .newsItem {
+margin: 5px;
+background-color : white;
+border: dashed 2px;
+padding: 5px;
+font-size: 12px;
+}
+
+#news .newsItem .newsTitle {
+margin: 5px;
+background-color : maroon;
+border: dashed 2px;
+padding: 5px;
+color: olive;
+font-size: 16px;
+}
+
+#news .newsItem .newsText {
+margin: 5px;
+background-color : blue;
+font-size: 14px;
+}
+
+.boldtable, .boldtable TD, .boldtable TH { 
+	font-family: "Arial"; 
+	font-size:10pt;   
+	}
+
+
+

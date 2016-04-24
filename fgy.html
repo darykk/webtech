@@ -1,0 +1,21 @@
+<script type="text/javascript">
+	
+$.getJSON('kepek.json', function(data){
+	var imgList = "";
+	imgList +="<ol>";
+	$(data).each(function(index, val){
+		imgList += '<li><a href="#" id="' + this.lnk + '"><img src= "' + this.kep + '"height="150"></a><br>' + this.nev +'</li>';
+	});
+	imgList += "</ol>"
+	$('#content2').append(imgList);
+	$('#gyumolcskosar').fadeOut();
+	ures = 0;
+});
+
+$( "#content2" ).on( "click", "a", function( event ) {
+    event.preventDefault();
+    $('#content').load($(this).attr('id'));
+});
+
+</script>
+<h2>Friss gyümölcs</h2>
